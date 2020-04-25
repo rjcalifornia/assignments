@@ -62,6 +62,15 @@ if ($file->acceptUploadedFile($uploaded_file)) {
 }
         }
 
+        
+        elgg_create_river_item(array(
+				'view' => 'river/object/assignments/create',
+				'action_type' => 'create',
+				'subject_guid' => $assignments->owner_guid,
+				'object_guid' => $assignments->getGUID(),
+			));
+
+			elgg_trigger_event('publish', 'object', $assignments);
 // if the my_blog was saved, we want to display the new post
 // otherwise, we want to register an error and forward back to the form
 if ($assignments_guid) {

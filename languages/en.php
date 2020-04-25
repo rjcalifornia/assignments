@@ -9,5 +9,6 @@ return array(
     'assignments:title' => 'Title',
     'assignments:view' => 'View all assignments',
     'assignments:description' => 'Instructions',
-    'assignments:date' => 'Date'
+    'assignments:date' => 'Date',
+    'river:create:object:assignments' => '%s published an assignment %s',
     );

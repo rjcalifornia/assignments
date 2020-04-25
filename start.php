@@ -24,14 +24,15 @@ function assignments_init() {
 
 	// add a blog widget
 	elgg_register_widget_type('assignments', elgg_echo('assignments'), elgg_echo('assignments:widget:description'));
-
-    	
         
+        elgg_register_plugin_hook_handler('view', 'river/object/comment/create', 'disable_river_actions');
         
 
 }
-
-
+  
+function disable_river_actions($hook, $type, $return, $params) {
+    return false;
+}
 /**
  * Dispatches blog pages.
  * URLs take the form of
