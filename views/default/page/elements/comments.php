@@ -30,13 +30,19 @@ $attr = [
 $owner = $vars['entity']->owner_guid;
 
 $lastday =     strtotime(($vars['entity']->duedate . ' ' . $vars['entity']->duetime ));
-//echo $lastday;
+echo $lastday;
 
 date_default_timezone_set('America/El_salvador');
 $timezone = date_default_timezone_get();
 echo "The current server timezone is: " . $timezone;  
+echo $date = date('m/d/Y h:i:s a', time());
 
+ $today = strtotime($date);
 
+if($today > $lastday)
+{
+    $is_due_today = true;
+}
  
 // work around for deprecation code in elgg_view()
 unset($vars['internalid']);
