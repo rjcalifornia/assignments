@@ -10,5 +10,24 @@ return array(
     'assignments:view' => 'View all assignments',
     'assignments:description' => 'Instructions',
     'assignments:date' => 'Date',
+    
+    
+    'assignments:add' => 'Create an assignment',
+    'assignments:title:all_assignments' => 'All assignments',
+    'assignments:instructions' => 'Instructions',
+    'assignments:points'=> 'Points',
+    'assignments:time' => 'Time',
+    'assignments:file' => 'Attach a document (Optional)',
+    
+    'assignments:group'=> 'Group assignments',
+    'assignments:write' => 'Create a new assignment',
+    
+    'assignments:assignment' => 'Assignments',
+    
+    'assignments:duedate' => 'Due date',
+    'assignments:document'=> 'Attached document',
+    
+    
+    
     'river:create:object:assignments' => '%s published an assignment %s',
     );

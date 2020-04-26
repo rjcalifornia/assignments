@@ -56,51 +56,7 @@ if (!elgg_in_context('widgets')) {
 }
 
 if ($full) {
-  /*  
-    $featured = elgg_get_entities(array(
-	'type' => 'object',
-	'subtype' => 'file',
-        'category' => 'featured',
-        'owner_guid' => $blog->guid,
-	//'full_view' => false,
-        'limit' => 1,
-	'no_results' => elgg_echo("file:none"),
-	'preload_owners' => true,
-	'preload_containers' => true,
-	'distinct' => false,
-));
-    
-    foreach ($featured as $f) {
-                 $file = get_entity($f->guid);
-
-                 // $image_url = $file->getIconURL('large');
-               //   $image_url = elgg_format_url($image_url);
-                  $download_url = elgg_get_download_url($file);
-             
-                  
-$current_featured = <<<___HTML
-<center>
-    <div>
-       
-            <img src="$download_url" class="img-fluid">
-       
-    </div>
-</center>
-___HTML;
-                          
-                 
-                  
-//echo $download_url;
-                 }
-   * 
-   */
-    /*
-$body =  elgg_view('output/longtext', array(
-		'value' => $current_featured,
-		'class' => 'blog-post',));
-
-*/
-
+ 
 	$featured = elgg_get_entities(array(
 	'type' => 'object',
 	'subtype' => 'attachments',
@@ -145,7 +101,7 @@ $body =  elgg_view('output/longtext', array(
         $time_label = elgg_echo('assignments:time');
          
         $body = <<<___HTML
-   
+   </br>
       <label for="assignment_points" class="assignments_labels">$instructions_label</label>
     <div class="assignments_fields">
     
@@ -153,7 +109,7 @@ $body =  elgg_view('output/longtext', array(
             $blog->instructions
        
     </div>
-
+    </br>
    <label for="assignment_points" class="assignments_labels">$points_label</label>
     <div class="assignments_fields">
     
@@ -161,7 +117,7 @@ $body =  elgg_view('output/longtext', array(
             $blog->points
        
     </div>
-    
+    </br>
 <label for="assignment_points" class="assignments_labels">$date_label</label>
     <div class="assignments_fields">
     
@@ -169,7 +125,7 @@ $body =  elgg_view('output/longtext', array(
             $blog->duedate
        
     </div>
-    
+    </br>
 <label for="assignment_points" class="assignments_labels">$time_label</label>
     <div class="assignments_fields">
     
@@ -177,7 +133,7 @@ $body =  elgg_view('output/longtext', array(
             $blog->duetime
        
     </div>
-
+</br>
 <label for="assignment_points" class="assignments_labels">$link_label</label>
     <div class="assignments_fields">
     

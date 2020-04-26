@@ -30,12 +30,12 @@ $attr = [
 $owner = $vars['entity']->owner_guid;
 
 $lastday =     strtotime(($vars['entity']->duedate . ' ' . $vars['entity']->duetime ));
-echo $lastday;
 
-date_default_timezone_set('America/El_salvador');
-$timezone = date_default_timezone_get();
-echo "The current server timezone is: " . $timezone;  
-echo $date = date('m/d/Y h:i:s a', time());
+
+//date_default_timezone_set('America/El_salvador');
+//$timezone = date_default_timezone_get();
+//echo "The current server timezone is: " . $timezone;  
+$date = date('m/d/Y h:i:s a', time());
 
  $today = strtotime($date);
 
@@ -46,18 +46,7 @@ if($today > $lastday)
  
 // work around for deprecation code in elgg_view()
 unset($vars['internalid']);
-/*
-$content = elgg_list_entities(array(
-	'type' => 'object',
-	'subtype' => 'comment',
-	'container_guid' => $vars['entity']->guid,
-	'reverse_order_by' => true,
-	'full_view' => true,
-	'limit' => $limit,
-	'preload_owners' => true,
-	'distinct' => false,
-	'url_fragment' => $attr['id'],
-)); */
+
 
 $comm_guid = $vars['entity']->guid;
 

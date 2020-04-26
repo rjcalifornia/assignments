@@ -14,7 +14,7 @@ $vars = array();
         $vars['enctype'] = 'multipart/form-data';
         
 
-$title = elgg_echo('assignments:title');
+$title = elgg_echo('assignments:add');
 
 $content = elgg_view_title($title);
 
