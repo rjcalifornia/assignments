@@ -5,6 +5,8 @@
 
 $group = elgg_get_page_owner_entity();
 
+$page_owner = $group->owner_guid;
+
 if ($group->assignments_enable == "no") {
 	return true;
 }
@@ -29,11 +31,19 @@ $options = array(
 $content = elgg_list_entities($options);
 elgg_pop_context();
 
+if($page_owner == elgg_get_logged_in_user_entity()->guid)
+{
 $new_link = elgg_view('output/url', array(
 	'href' => "assignments/add/$group->guid",
 	'text' => elgg_echo('assignments:write'),
 	'is_trusted' => true,
 ));
+}
+ else {
+    $new_link = '';
+}
+
+
 
 echo elgg_view('groups/profile/module', array(
 	'title' => elgg_echo('assignments:group'),
