@@ -7,6 +7,7 @@
 function get_assignments_content_list($container_guid = NULL) {
 
 	$return = array();
+        $page_owner = elgg_get_page_owner_entity()->owner_guid;
 
 	$return['filter_context'] = $container_guid ? 'mine' : 'all';
 
@@ -52,7 +53,10 @@ function get_assignments_content_list($container_guid = NULL) {
 		elgg_push_breadcrumb(elgg_echo('assignments:list'));
 	}
 
+        if($page_owner == $current_user->guid)
+{
 	elgg_register_title_button('assignments', 'add', 'object', 'assignments');
+}
 
 	$return['content'] = elgg_list_entities($options);
 

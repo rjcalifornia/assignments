@@ -5,6 +5,8 @@
  * and open the template in the editor.
  */
 $site_url = elgg_get_site_url();
+$page_owner = elgg_get_page_owner_entity()->owner_guid;
+$current_user = elgg_get_logged_in_user_entity();
 
 elgg_gatekeeper();
 $form_vars = array('enctype' => 'multipart/form-data');
@@ -30,9 +32,16 @@ $body = elgg_view_layout('one_sidebar', array(
    'sidebar' => $sidebar
 ));
 
+     if($page_owner == $current_user->guid)
+{
 // draw the page, including the HTML wrapper and basic page layout
 echo elgg_view_page($title, $body);
-
+}
+else
+{
+     register_error("You are not allowed to perform that action");
+   forward(REFERER);
+}
 //echo $content;
 ?>
 <!-- Compiled and minified CSS -->

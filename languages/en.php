@@ -21,11 +21,14 @@ return array(
     
     'assignments:group'=> 'Group assignments',
     'assignments:write' => 'Create a new assignment',
+    'assignments:title:user_assignments'=> 'All Assignments',
     
     'assignments:assignment' => 'Assignments',
     
     'assignments:duedate' => 'Due date',
     'assignments:document'=> 'Attached document',
+    'assignments:received' => 'Assignment successfully submitted',
+    
     
     
     
