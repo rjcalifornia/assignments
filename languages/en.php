@@ -24,6 +24,7 @@ return array(
     'assignments:title:user_assignments'=> 'All Assignments',
     
     'assignments:assignment' => 'Assignments',
+    'assignments:closed'=>'Assignment closed. No more submissions allowed',
     
     'assignments:duedate' => 'Due date',
     'assignments:document'=> 'Attached document',
