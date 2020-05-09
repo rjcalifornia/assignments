@@ -74,9 +74,9 @@ if ($file->acceptUploadedFile($uploaded_file)) {
 // if the my_blog was saved, we want to display the new post
 // otherwise, we want to register an error and forward back to the form
 if ($assignments_guid) {
-   system_message("Your blog post was saved.");
+   system_message("Your assignment was published.");
    forward($assignments->getURL());
 } else {
-   register_error("The blog post could not be saved.");
+   register_error("The assignment post could not be saved.");
    forward(REFERER); // REFERER is a global variable that defines the previous page
 }

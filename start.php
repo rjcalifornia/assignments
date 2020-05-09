@@ -8,6 +8,7 @@ function assignments_init() {
     elgg_register_library('elgg:assignments', __DIR__ . '/lib/assignments.php');
     // register the save action
     elgg_register_action("assignments/save", __DIR__ . "/actions/assignments/save.php");
+    elgg_register_action("assignments/submit_assignment", __DIR__ . "/actions/assignments/submit_assignment.php");
 
     // register the page handler
     elgg_register_page_handler('assignments', 'assignments_page_handler');

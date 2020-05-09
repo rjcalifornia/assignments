@@ -29,8 +29,16 @@ return array(
     'assignments:duedate' => 'Due date',
     'assignments:document'=> 'Attached document',
     'assignments:received' => 'Assignment successfully submitted',
-    
-    
+    'assignments:none' => 'No assignments',
+    'assignments:enableassignments' => 'Enable assignments',
+    'assignments:student:name' => 'Name',
+    'assignments:student:email' => 'Email',
+    'assignments:student:homework' => 'Assignment',
+    'assignments:student:options' => 'Options',
+    'assignment:view_file' => 'Download',
+    'assignments:submissions' => 'Assignment submissions',
+    'assignments:submit:homework' => 'Submit assignment',
+    'assignments:student:submit' => 'Select a file to upload',
     
     
     'river:create:object:assignments' => '%s published an assignment %s',

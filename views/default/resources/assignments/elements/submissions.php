@@ -50,15 +50,31 @@ unset($vars['internalid']);
 
 $comm_guid = $vars['entity']->guid;
 
-$content = get_all_responses($attr, $comm_guid, $owner);
+//$content = get_all_responses($attr, $comm_guid, $owner);
+//var_dump($content);
 
 if ($show_add_form && $owner != elgg_get_logged_in_user_entity()->guid && $is_due_today == false) {
-	$content .= elgg_view_form('comment/save', array(), $vars);
+	//$content .= elgg_view_form('comment/save', array(), $vars);
+    
+    $form_vars = array('enctype' => 'multipart/form-data');
+
+        $content .=  elgg_view_form('assignments/submit_assignment', $form_vars, $vars);
 }
 
 if($is_due_today == true)
 {
     $content.= elgg_echo('assignments:closed');
 }
+
+$assignmentEntity = $vars['entity'];
+
+$logged_guid = elgg_get_logged_in_user_entity()->guid;
+if($logged_guid == $vars['entity']->owner_guid){
+    
+        echo elgg_view('resources/assignments/elements/received_assignments', 
+                array('entity' => $assignmentEntity));
+}
+
+
 
 echo elgg_format_element('div', $attr, $content);
