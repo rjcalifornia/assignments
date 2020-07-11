@@ -8,6 +8,7 @@
 ?>
 <style>
 
+
 /* ***************************************
 	MISC
 *****************************************/
@@ -299,6 +300,50 @@ tbody.collapse.in {
     margin: 0 0px 0px 0; 
     padding: 8px 8px; border-radius: 3px; color: white; font-weight: 400;
     width: 55%;
+}
+.assignments-river-elgg-icon{
+
+    
+    
+    font-size:86px;
+    color: #f5f6f5;
+    
+}
+
+
+.head-river-elgg-icon{
+
+    
+    
+    
+    color: #f5f6f5;
+    
+}
+
+.assignment-description{
+    
+    color: #f5f6f7;
+}
+h2 a{
+    color: #f5f6f5;
+}
+
+.provider-name{
+    color: #babcbf;
+}
+
+.provider a.provider-name:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a.action:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a.url-title:hover{
+    color:#babcbf;
 }
 </style>
 

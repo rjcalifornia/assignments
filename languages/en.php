@@ -10,6 +10,8 @@ return array(
     'assignments:view' => 'View all assignments',
     'assignments:description' => 'Instructions',
     'assignments:date' => 'Date',
+    'assignments:widget:new' => 'New assignment published',
+    
     
     
     'assignments:add' => 'Create an assignment',

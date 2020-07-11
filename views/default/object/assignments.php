@@ -102,7 +102,8 @@ if ($full) {
          
         $body = <<<___HTML
    </br>
-      <label for="assignment_points" class="assignments_labels">$instructions_label</label>
+     <span class="assignments-elgg-icon fa fa-book"></span> 
+     <label for="assignment_points" class="assignments_labels">$instructions_label</label>
     <div class="assignments_fields">
     
        
@@ -110,6 +111,7 @@ if ($full) {
        
     </div>
     </br>
+    <span class="assignments-elgg-icon fa fa-sort-numeric-asc"></span>
    <label for="assignment_points" class="assignments_labels">$points_label</label>
     <div class="assignments_fields">
     
@@ -118,6 +120,7 @@ if ($full) {
        
     </div>
     </br>
+<span class="assignments-elgg-icon fa fa-calendar-o"></span>    
 <label for="assignment_points" class="assignments_labels">$date_label</label>
     <div class="assignments_fields">
     
@@ -126,6 +129,7 @@ if ($full) {
        
     </div>
     </br>
+<span class="assignments-elgg-icon fa fa-clock-o"></span>
 <label for="assignment_points" class="assignments_labels">$time_label</label>
     <div class="assignments_fields">
     
@@ -134,6 +138,7 @@ if ($full) {
        
     </div>
 </br>
+<span class="assignments-elgg-icon fa fa-file-pdf-o"></span> 
 <label for="assignment_points" class="assignments_labels">$link_label</label>
     <div class="assignments_fields">
     
@@ -150,7 +155,7 @@ $lastday =     strtotime($blog->duedate);
         
         if($today > $lastday)
         {
-            echo 'test';
+           // echo 'test';
         }
 
 
@@ -182,6 +187,17 @@ $lastday =     strtotime($blog->duedate);
 		'icon' => $owner_icon,
 	);
 	$params = $params + $vars;
-	echo elgg_view('object/elements/summary', $params);
+	
+        if (elgg_in_context('widgets')) {
+        echo elgg_view('resources/assignments/elements/summary', $params);
+        echo elgg_view('resources/assignments/elements/widget_preview',
+                array('assignment' => $blog));
+        
+        
+        }
+        
+        else{
+            echo elgg_view('object/elements/summary', $params);
+        }
 
 }
