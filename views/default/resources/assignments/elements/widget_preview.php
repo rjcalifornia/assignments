@@ -9,6 +9,7 @@ $object = $vars['assignment'];
 $group = elgg_get_page_owner_entity();
 
 $siteUrl = $group->getUrl();
+$assignmentUrl = $object->getUrl();
 
 $cardPreview = 
 <<<___HTML
@@ -26,20 +27,20 @@ $cardPreview =
     </br>
 <div class="art-bd">
 <center>
-<a href="$blogUrl">
+<a href="$assignmentUrl">
 <span class="assignments-river-elgg-icon fa fa-pencil-square-o"></span>
 </a>
 </center>
 </div>
 <div class="txt-bd">
 <h2 class="title">
-<a  class="url-title" href="$blogUrl">
+<a  class="url-title" href="$assignmentUrl">
 $object->title
 </a>
     </h2>
     <p class="assignment-description">
     $object->excerpt
-    </p><a class="action" href="$blogUrl">View assignment.. &gt;</a>
+    </p><a class="action" href="$assignmentUrl">View assignment.. &gt;</a>
         </div>
    
 </div>
