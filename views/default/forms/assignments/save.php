@@ -217,7 +217,7 @@ echo elgg_view_field([
     '#type' => 'text',
     '#label' => elgg_echo('assignments:points'),
     'name' => 'points',
-    'value' => $vars['points'],
+    'value' => $assignments->points,
     'required' => true,
 ]);
 
@@ -225,7 +225,7 @@ echo elgg_view_field([
     '#type' => 'date',
     '#label' => elgg_echo('assignments:date'),
     'name' => 'duedate',
-    'value' => $vars['duedate'],
+    'value' => $assignments->duedate,
     'required' => true,
 ]);
 
@@ -256,7 +256,7 @@ echo elgg_view_field([
         
 	),
     'required' => true,
-    'value' => $vars['duetime'],
+    'value' => $assignments->duetime,
 ]); 
 
 echo elgg_view_field([

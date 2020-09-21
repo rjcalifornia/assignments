@@ -8,6 +8,22 @@ $duetime = get_input('duetime');
 $access_id = get_input('access_id');
 $uploaded_files = elgg_get_uploaded_files('featured_image');
 
+$guid = get_input('guid');
+$error_forward_url = REFERER;
+if ($guid) {
+	$entity = get_entity($guid);
+	
+		$assignments = $entity;
+                $assignments->title = $title;
+                $assignments->instructions = $body;
+                $assignments->points = $points;
+                $assignments->duedate = $duedate;
+                $assignments->duetime = $duetime;
+                $assignments_guid = $assignments->save();
+
+	// save some data for revisions once we save the new edit
+	
+} else {
 //$tags = string_to_tag_array(get_input('tags'));
 $excerpt = elgg_get_excerpt($body, 18);
 // create a new my_blog object and put the content in it
@@ -71,6 +87,7 @@ if ($file->acceptUploadedFile($uploaded_file)) {
 			));
 
 			elgg_trigger_event('publish', 'object', $assignments);
+}
 // if the my_blog was saved, we want to display the new post
 // otherwise, we want to register an error and forward back to the form
 if ($assignments_guid) {

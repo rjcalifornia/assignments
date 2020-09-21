@@ -27,9 +27,7 @@ $cardPreview =
     </br>
 <div class="art-bd">
 <center>
-<a href="$assignmentUrl">
-<span class="assignments-river-elgg-icon fa fa-pencil-square-o"></span>
-</a>
+
 </center>
 </div>
 <div class="txt-bd">

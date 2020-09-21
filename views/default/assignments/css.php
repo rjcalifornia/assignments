@@ -323,6 +323,7 @@ tbody.collapse.in {
 .assignment-description{
     
     color: #f5f6f7;
+    font-size: 12px;
 }
 h2 a{
     color: #f5f6f5;
@@ -344,6 +345,10 @@ a.action:hover {
 
 a.url-title:hover{
     color:#babcbf;
+}
+a.url-title{
+    font-size: 14px;
+    
 }
 </style>
 
